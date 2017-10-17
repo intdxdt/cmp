@@ -1,0 +1,2 @@
+# cmp
+compare - go
