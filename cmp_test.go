@@ -23,5 +23,13 @@ func TestCmp(t *testing.T) {
 			g.Assert(F64(3., 3.)).Equal(0)
 			g.Assert(F64(0.3, 0.1+0.2)).Equal(0)
 		})
+		g.It("should test str comparison", func() {
+			g.Assert(Str("foo", "foo/a")).Equal(-1)
+			g.Assert(Str("fooza/b/a", "foo")).Equal(1)
+			g.Assert(Str("foobar", "fooza/b/a")).Equal(-1)
+			g.Assert(Str("foozbaz", "bazfooz")).Equal(1)
+			g.Assert(Str("foozbaz", "foozbaz")).Equal(0)
+			g.Assert(Str("foo", "foo")).Equal(0)
+		})
 	})
 }
