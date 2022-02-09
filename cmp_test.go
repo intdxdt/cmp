@@ -1,8 +1,8 @@
 package cmp
 
 import (
-	"testing"
 	"github.com/franela/goblin"
+	"testing"
 )
 
 func TestCmp(t *testing.T) {
